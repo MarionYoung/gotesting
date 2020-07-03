@@ -19,3 +19,16 @@ func main() {
 [2020-07-03 13:50:00] [INFO] [main.go:main:10] info日志
 */
 ```
+
+# file
+```go
+func logFile() {
+	log = mylogger.NewFileLogger("Info", "./", "access.log", 1<<30) // 文件日志实例 GB
+	log.Debug("debug 日志")
+	log.Info("info日志")
+	log.Warning("这是一条warning日志")
+	id := 10001
+	name := "marion"
+	log.Error("这是一条Error日志,id:%d,name:%s", id, name)
+}
+```
